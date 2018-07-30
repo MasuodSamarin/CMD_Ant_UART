@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<FileVersion major="1" minor="0" />
+	<ActiveTarget name="Debug" />
+	<File name="alarm\bt_smart_alarm.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4114" topLine="211" />
+		</Cursor>
+	</File>
+	<File name="wifi\wifi.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3178" topLine="110" />
+		</Cursor>
+	</File>
+	<File name="cpu\ac690x\ui\led\led_eye.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3289" topLine="99" />
+		</Cursor>
+	</File>
+	<File name="include\echo\echo_api.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="114" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="ai_toy\ai_toy.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="8501" topLine="383" />
+		</Cursor>
+	</File>
+	<File name="idle\idle.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2253" topLine="95" />
+		</Cursor>
+	</File>
+	<File name="wifi\wifi_key.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2608" topLine="48" />
+		</Cursor>
+	</File>
+	<File name="music\music.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="13029" topLine="489" />
+		</Cursor>
+	</File>
+	<File name="bluetooth\btstack\bt_key_msg.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5370" topLine="148" />
+		</Cursor>
+	</File>
+	<File name="bluetooth\btstack\bt_key_deal.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="41748" topLine="1405" />
+		</Cursor>
+	</File>
+	<File name="cpu\ac690x\key_drv\key.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4404" topLine="202" />
+		</Cursor>
+	</File>
+	<File name="bt_smart\bt_smart.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="14781" topLine="536" />
+		</Cursor>
+	</File>
+	<File name="cpu\ac690x\sys_detect.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="13894" topLine="551" />
+		</Cursor>
+	</File>
+	<File name="cpu\ac690x\key_drv\key_drv_ad.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6563" topLine="243" />
+		</Cursor>
+	</File>
+</CodeBlocks_layout_file>
