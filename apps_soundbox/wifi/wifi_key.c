@@ -10,7 +10,7 @@
 						/*00  220k 耳朵灯开关	 */   	MSG_EAR_LED,\
 						/*01  100k 收藏	 */   		MSG_WIFI_COLLECTION,\
 						/*02  51k  微聊    */       	NO_MSG,\
-						/*03  33k  WIFI模式  */   	MSG_WIFI_MODE,\
+						/*03  33k  每日新闻  */   		MSG_WIFI_DAILY_NEWS,\
 						/*04  24K  中译英  ，英译中*/      MSG_WIFI_CH_2_EN,\
 						/*05  15k  功能转换*/ 			MSG_CHANGE_WORKMODE,\
 						/*06  9.1K 上一曲  */    		MSG_WIFI_VOL_DOWN,\
@@ -23,9 +23,9 @@
                         /*00  童锁*/        MSG_KEY_LOCK,\
                         /*01  播放收藏*/      MSG_WIFI_COLL_PLAY,\
                         /*02*/      	  NO_MSG,\
-                        /*03  WiFi配网*/    MSG_WIFI_SET,\
+                        /*03*/    		  NO_MSG,\
                         /*04*/            NO_MSG,\
-                        /*05*/            NO_MSG,\
+                        /*05  WiFi配网*/    MSG_WIFI_SET,\
                         /*06  音量减*/       MSG_WIFI_PREV_FILE,\
                         /*07  音量加*/       MSG_WIFI_NEXT_FILE,\
                         /*08*/            NO_MSG,\

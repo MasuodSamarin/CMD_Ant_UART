@@ -44,6 +44,7 @@ static tbool wifi_notice_play_callback(void *priv, int msg[])
 }
 
 static u8 g_wifi_mode = WIFI_MODE_CH_2_EN; //中英互译状态
+bool wifi_mode_flag = 0;	//WiFi模式下为1，按键转模式到其他模式为0
 extern u8 microphone_enable;
 extern bool wifi_dc_check;	//充电检测
 REVERB_API_STRUCT * wifi_reverb = NULL;
@@ -104,7 +105,7 @@ static void wifi_task(void *p)
 					microphone_enable = 0;
 					wifi_uart_send(WIFI_ECHO_STOP, 1);
 					tmp_msg = MSG_ECHO_STOP;
-					bt_prompt_play_by_name(AI_TOY_NOTICE_EXIT_MIC,NULL);
+					//bt_prompt_play_by_name(AI_TOY_NOTICE_EXIT_MIC,NULL);
 					echo_msg_deal_api((void**)&wifi_reverb, &tmp_msg);
 				}
 				else
@@ -113,7 +114,7 @@ static void wifi_task(void *p)
 					microphone_enable = 1;
 					wifi_uart_send(WIFI_ECHO_START, 1);
 					tmp_msg = MSG_ECHO_START;
-					bt_prompt_play_by_name(AI_TOY_NOTICE_ENTER_MIC,NULL);
+					//bt_prompt_play_by_name(AI_TOY_NOTICE_ENTER_MIC,NULL);
 					echo_msg_deal_api((void**)&wifi_reverb, &tmp_msg);
 				}
 				break;
@@ -122,9 +123,7 @@ static void wifi_task(void *p)
 				if(!wifi_dc_check)
 				{
 					wifi_puts("wifi_low_power_warning!\n");
-					eye_led_api(EFFECT_LOW_POWER_WARMING, 15 ,0);
 					wifi_uart_send(WIFI_LOW_POWER_WARN, 1);
-					bt_prompt_play_by_name(AI_TOY_NOTICE_LOW_POWER,NULL);
 				}
 				break;
 			
@@ -233,6 +232,8 @@ static void wifi_task_init(void *priv)
 			10,
 			WIFI_TASK_NAME);
 
+	wifi_uart_send(WIFI_MODE_START, 1);//通知WIFI模块，进入工作
+	wifi_mode_flag = 1;
     if(OS_NO_ERR == err)
     {
         key_msg_register(WIFI_TASK_NAME, wifi_ad_table, NULL, NULL, NULL);
@@ -255,6 +256,7 @@ static void wifi_task_exit(void)
 		do{
 			OSTimeDly(1);
 		} while(os_task_del_req(WIFI_TASK_NAME) != OS_TASK_NOT_EXIST);
+		wifi_uart_send(WIFI_MODE_STOP, 1);	//通知WIFI模块，结束工作
 		wifi_puts("del_wifi_task: succ\n");
 	}
 }

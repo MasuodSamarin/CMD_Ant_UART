@@ -4132,7 +4132,7 @@
 	"typedef.h"
 	"cpu.h"
 
-1532945124 d:\work\jielibot\debuging\space_ant_uart\include_lib\common\msg.h
+1533547794 d:\work\jielibot\debuging\space_ant_uart\include_lib\common\msg.h
 	"typedef.h"
 
 1527151830 d:\work\jielibot\debuging\space_ant_uart\include_lib\rtos\os_api.h
@@ -4615,7 +4615,7 @@
 1527151830 d:\work\jielibot\debuging\space_ant_uart\include_lib\bluetooth\ble_api.h
 	"typedef.h"
 
-1532588724 source:d:\work\jielibot\debuging\space_ant_uart\apps_soundbox\bluetooth\btstack\bt_key_msg.c
+1533628537 source:d:\work\jielibot\debuging\space_ant_uart\apps_soundbox\bluetooth\btstack\bt_key_msg.c
 	"includes.h"
 	"sdk_cfg.h"
 	"bt_key_msg.h"
@@ -4669,7 +4669,7 @@
 1527151832 d:\work\jielibot\debuging\space_ant_uart\apps_soundbox\include\bluetooth\le_server_module.h
 	"bluetooth/ble_api.h"
 
-1532588724 source:d:\work\jielibot\debuging\space_ant_uart\apps_soundbox\bt_smart\bt_smart.c
+1533632153 source:d:\work\jielibot\debuging\space_ant_uart\apps_soundbox\bt_smart\bt_smart.c
 	"bt_smart.h"
 	"bt_smart_led.h"
 	"bluetooth/ble_api.h"
@@ -4802,7 +4802,7 @@
 	"mem/malloc.h"
 	"stdarg.h"
 
-1531907056 source:d:\work\jielibot\debuging\space_ant_uart\apps_soundbox\common\os_api\task_manage.c
+1532947499 source:d:\work\jielibot\debuging\space_ant_uart\apps_soundbox\common\os_api\task_manage.c
 	"sdk_cfg.h"
 	"rtos/task_manage.h"
 	"rtos/os_api.h"
@@ -5080,7 +5080,7 @@
 	"iis.h"
 	"iis/wm8978.h"
 
-1531898502 source:d:\work\jielibot\debuging\space_ant_uart\apps_soundbox\cpu\ac690x\key_drv\key.c
+1533628560 source:d:\work\jielibot\debuging\space_ant_uart\apps_soundbox\cpu\ac690x\key_drv\key.c
 	"includes.h"
 	"key_drv/key.h"
 	"common/msg.h"
@@ -5104,7 +5104,7 @@
 	"includes.h"
 	"key_drv/key.h"
 
-1532592516 source:d:\work\jielibot\debuging\space_ant_uart\apps_soundbox\cpu\ac690x\key_drv\key_drv_ad.c
+1533698464 source:d:\work\jielibot\debuging\space_ant_uart\apps_soundbox\cpu\ac690x\key_drv\key_drv_ad.c
 	"includes.h"
 	"key_drv/key_drv_ad.h"
 	"key_drv/key.h"
@@ -5167,7 +5167,7 @@
 1527151830 d:\work\jielibot\debuging\space_ant_uart\include_lib\speex\speex_encode_api.h
 	"dec/if_decoder_ctrl.h"
 
-1532488604 source:d:\work\jielibot\debuging\space_ant_uart\apps_soundbox\cpu\ac690x\sys_detect.c
+1533719780 source:d:\work\jielibot\debuging\space_ant_uart\apps_soundbox\cpu\ac690x\sys_detect.c
 	"sdk_cfg.h"
 	"sys_detect.h"
 	"key_drv/key_drv_ad.h"
@@ -5247,7 +5247,7 @@
 1527151832 d:\work\jielibot\debuging\space_ant_uart\apps_soundbox\include\cpu\ac690x\ui\led\led7_drv.h
 	"includes.h"
 
-1532571781 source:d:\work\jielibot\debuging\space_ant_uart\apps_soundbox\cpu\ac690x\uart\uart.c
+1533626246 source:d:\work\jielibot\debuging\space_ant_uart\apps_soundbox\cpu\ac690x\uart\uart.c
 	"sdk_cfg.h"
 	"uart.h"
 	"cpu/uart_api.h"
@@ -5712,7 +5712,7 @@
 	"echo/echo_api.h"
 	"linein.h"
 
-1532585921 source:d:\work\jielibot\debuging\space_ant_uart\apps_soundbox\main\main.c
+1533633072 source:d:\work\jielibot\debuging\space_ant_uart\apps_soundbox\main\main.c
 	"sdk_cfg.h"
 	"includes.h"
 	"main_key.h"
@@ -5841,7 +5841,7 @@
 	"uart.h"
 	"dec/decoder_phy.h"
 
-1532588724 source:d:\work\jielibot\debuging\space_ant_uart\apps_soundbox\music\music_key.c
+1533628572 source:d:\work\jielibot\debuging\space_ant_uart\apps_soundbox\music\music_key.c
 	"music_key.h"
 	"common/msg.h"
 
@@ -6053,7 +6053,7 @@
 	"usb_key.h"
 	"common/msg.h"
 
-1532588733 source:d:\work\jielibot\debuging\space_ant_uart\apps_soundbox\wifi\wifi.c
+1533628138 source:d:\work\jielibot\debuging\space_ant_uart\apps_soundbox\wifi\wifi.c
 	"bt_key_deal.h"
 	"rtos/os_api.h"
 	"common/msg.h"
@@ -6091,13 +6091,13 @@
 1528891098 d:\work\jielibot\debuging\space_ant_uart\apps_soundbox\include\wifi\wifi_key.h
 	"sdk_cfg.h"
 
-1532588724 source:d:\work\jielibot\debuging\space_ant_uart\apps_soundbox\wifi\wifi_key.c
+1533628656 source:d:\work\jielibot\debuging\space_ant_uart\apps_soundbox\wifi\wifi_key.c
 	"includes.h"
 	"sdk_cfg.h"
 	"wifi/wifi_key.h"
 	"common/msg.h"
 
-1532000231 source:d:\work\jielibot\debuging\space_ant_uart\apps_soundbox\idle\idle.c
+1533628376 source:d:\work\jielibot\debuging\space_ant_uart\apps_soundbox\idle\idle.c
 	"common/app_cfg.h"
 	"rtos/os_api.h"
 	"rtos/os_cfg.h"

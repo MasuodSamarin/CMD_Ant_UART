@@ -9,7 +9,7 @@
                         /*00*/    MSG_EAR_LED,\
                         /*01*/    NO_MSG,\
                         /*02*/    NO_MSG,\
-                        /*03*/    MSG_WIFI_MODE,\
+                        /*03*/    NO_MSG,\
                         /*04*/    NO_MSG,\
                         /*05*/    MSG_CHANGE_WORKMODE,\
                         /*06*/    MSG_AI_TOY_VOL_DOWN,\
@@ -26,7 +26,7 @@
                         /*05*/    MSG_MUSIC_DIR_MODE,\
                         /*06*/    MSG_MUSIC_PREV_FILE,\
                         /*07*/    MSG_MUSIC_NEXT_FILE,\
-                        /*08*/    MSG_AI_BT_DISCONNECT_CTRL,\
+                        /*08*/    NO_MSG,\
                         /*09*/    NO_MSG,
 
 #define ADKEY_DECODE_HOLD		\

@@ -547,8 +547,8 @@ void bt_smart_msg_deal(void *priv, int *msg)
  
 		case MSG_LOW_POWER_VOICE:
 			/* EyeEffectCtl(EFFECT_LOW_POWER_WARMING); */
-#if WIFI_BT_UART_EN		
-			if(!wifi_dc_check)
+#if WIFI_BT_UART_EN		//未充电状态和非wifi模式播放提示音
+			if((!wifi_dc_check)&&(strcmp(keymsg_task_name,"WiFiTask")))
 			{
 				eye_led_api(EFFECT_LOW_POWER_WARMING, 15 ,0);
 				if(compare_task_name(MUSIC_TASK_NAME))

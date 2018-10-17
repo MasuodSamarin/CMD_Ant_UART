@@ -31,6 +31,7 @@ extern void wifi_uart_send(u8 data, u8 len);
 u8 first_power_on_flag = 1;
 
 extern u8 bt_smart_update_flag;
+extern bool wifi_mode_flag;
 
 extern void debug_loop_err_clear(void);
 extern void ble_server_close(void);
@@ -91,8 +92,9 @@ static void power_on_deal(void)
 {
 	int msg[3];
 	NOTICE_PLAYER_ERR n_err;
-	int poweron_flag = update_poweron_check();
-
+	//int poweron_flag = update_poweron_check();
+	int poweron_flag = 0;
+	
 	if(poweron_flag == 0)
 	{
 		eye_led_api(EFFECT_POWER_ON, 0, 0);	
@@ -167,10 +169,13 @@ static void idle_task(void *p)
 	if(g_powerdown_flag)
 	{
 		/* eye_led_api(EFFECT_POWER_OFF, 0 ,0); */
-		n_err = notice_player_play_by_path(IDLE_TASK_NAME, 
-				(char *)AI_TOY_NOTICE_LOW_POWER_OFF, 
-				power_on_notice_play_callback,
-				NULL);
+		//非WiFi模式关机，播放关机提示音；WiFi模式下，由WiFi模块播放提示音，这里不需要播放提示音
+		if(wifi_mode_flag == 0){	
+			n_err = notice_player_play_by_path(IDLE_TASK_NAME, 
+					(char *)AI_TOY_NOTICE_LOW_POWER_OFF, 
+					power_on_notice_play_callback,
+					NULL);			
+		}
 		if(first_power_on_flag)
 		{
 				

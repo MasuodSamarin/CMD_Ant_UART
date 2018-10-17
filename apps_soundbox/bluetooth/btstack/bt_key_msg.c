@@ -110,7 +110,7 @@ const u8 bt_ir_table[4][21] =				//红外遥控转换表
                         /*00  220k 幼儿    */    MSG_EAR_LED,\
                         /*01  100k 小学    */    NO_MSG,\
                         /*02  51k  初中    */    NO_MSG,\
-                        /*03  33k  英译中  */     MSG_WIFI_MODE,\
+                        /*03  33k  英译中  */     NO_MSG,\
                         /*04  24K  中译英  */     NO_MSG,\
                         /*05  15k  功能转换*/      MSG_CHANGE_WORKMODE,\
                         /*06  9.1K 上一曲  */     MSG_AI_TOY_VOL_DOWN,\
@@ -124,10 +124,10 @@ const u8 bt_ir_table[4][21] =				//红外遥控转换表
                         /*02*/    NO_MSG,\
                         /*03*/    NO_MSG,\
                         /*04*/    NO_MSG,\
-                        /*05*/    NO_MSG,\
+                        /*05*/    MSG_AI_BT_DISCONNECT_CTRL,\
                         /*06*/    MSG_BT_PREV_FILE,\
                         /*07*/    MSG_BT_NEXT_FILE,\
-                        /*08*/    MSG_AI_BT_DISCONNECT_CTRL,\
+                        /*08*/    NO_MSG,\
                         /*09*/    NO_MSG,
 
 

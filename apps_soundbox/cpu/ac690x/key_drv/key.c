@@ -11,6 +11,7 @@
 extern u8 fast_test;
 
 bool key_lock_flag = 0;	//¶ùÍ¯Ëø
+extern bool wifi_power_on_start_statu;
 
 u8 key_type;        ///<°´¼üÀàĞÍ
 char *keymsg_task_name;
@@ -200,7 +201,7 @@ void key2msg_filter(u8 key_status, u8 back_last_key)
            {
                 msg = menu_adkeymsg_table[back_last_key];
                 /* os_taskq_post_msg(menu_keytask_name, 1, msg); */
-				if(key_lock_flag == 0) //¶ùÍ¯Ëø
+				if((key_lock_flag == 0)&&(wifi_power_on_start_statu == 1)) //¶ùÍ¯Ëø
 				{
 					key_msg_sender(menu_keytask_name, msg);
 				}
@@ -213,13 +214,13 @@ void key2msg_filter(u8 key_status, u8 back_last_key)
 
 //    key_printf("msg:0x%02x\n",msg);
 #if WIFI_BT_UART_EN
-		if((msg < MSG_MAIN_MAX)||(msg == MSG_WIFI_MODE)||(msg == MSG_KEY_LOCK)||(msg == MSG_EAR_LED))
+	if((msg < MSG_MAIN_MAX)||(msg == MSG_WIFI_MODE)||(msg == MSG_KEY_LOCK)||(msg == MSG_EAR_LED))
 #else
-		if(msg < MSG_MAIN_MAX)
+	if(msg < MSG_MAIN_MAX)
 #endif
     {
          /* os_taskq_post_msg(MAIN_TASK_NAME, 1, msg); */
-		if((key_lock_flag == 0)||(msg == MSG_KEY_LOCK))//¶ùÍ¯Ëø
+		if(((key_lock_flag == 0)||(msg == MSG_KEY_LOCK))&&(wifi_power_on_start_statu == 1))//¶ùÍ¯Ëø
 		{
 			key_msg_sender(MAIN_TASK_NAME, msg);
 		}
@@ -227,7 +228,7 @@ void key2msg_filter(u8 key_status, u8 back_last_key)
     else if(keymsg_task_name)
     {
         /* os_taskq_post_msg(keymsg_task_name, 1, msg); */
-		if(key_lock_flag == 0)//¶ùÍ¯Ëø
+		if((key_lock_flag == 0)&&(wifi_power_on_start_statu == 1))//¶ùÍ¯Ëø
 		{
 			key_msg_sender(keymsg_task_name, msg);
 		}

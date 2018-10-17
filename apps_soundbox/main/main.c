@@ -436,6 +436,7 @@ void AI_toy_dev_online_ok(void);
 
 extern bool key_lock_flag;	//儿童锁
 extern bool ear_light_flag; //耳朵灯
+extern bool wifi_mode_flag; //wifi模式标志
 
 static void TaskMain(void *p)
 {
@@ -703,21 +704,26 @@ static void TaskMain(void *p)
 			}
 			break;
 			
-#if WIFI_BT_UART_EN
-		case MSG_WIFI_MODE:
-			puts("MSG_WIFI_WORKMODE\n");
-			wifi_uart_send(WIFI_MODE_START, 1);		//通知WIFI模块，开始工作
-			os_taskq_post_msg(MAIN_TASK_NAME, 2, SYS_EVENT_TASK_RUN_REQ, WIFI_TASK_NAME);	
+#if 0//WIFI_BT_UART_EN
+		case MSG_WIFI_POWER_OFF:
+			puts("MSG_WIFI_POWER_OFF\n");
+			wifi_uart_send(WIFI_LOW_POWER_OFF, 1);		//通知WIFI模块，开始工作
+			//os_taskq_post_msg(MAIN_TASK_NAME, 2, SYS_EVENT_TASK_RUN_REQ, WIFI_TASK_NAME);	
 			break;
+		case MSG_WIFI_POWER_WARNING:
+			puts("MSG_WIFI_POWER_WARNING\n");
+			wifi_uart_send(WIFI_LOW_POWER_WARN, 1);		//通知WIFI模块，开始工作
+			//os_taskq_post_msg(MAIN_TASK_NAME, 2, SYS_EVENT_TASK_RUN_REQ, WIFI_TASK_NAME);	
+			break;	
 #endif		
         case MSG_CHANGE_WORKMODE:
             puts("MSG_CHANGE_WORKMODE\n");
+			task_switch(0,0,SWITCH_NEXT_TASK);
 #if WIFI_BT_UART_EN
-			if(!strcmp(keymsg_task_name,"WiFiTask")){
-				wifi_uart_send(WIFI_MODE_STOP, 1);	//通知WIFI模块，结束工作
+			if(wifi_mode_flag){
+				wifi_mode_flag = 0 ;
 			}
 #endif		
-			task_switch(0,0,SWITCH_NEXT_TASK);
 //            Post_msg_to_rcsp_Task(MSG_RSCP_CHANGE_WORDMODE_ACTION,0,0);
             break;
 		case MSG_LAST_WORKMOD:
@@ -870,7 +876,6 @@ static void TaskMain(void *p)
 			puts("MSG_LOW_POWER******\n");
 			if(!wifi_dc_check)
 			{
-
 				wifi_uart_send(WIFI_LOW_POWER_OFF, 1);
 				task_switch(IDLE_TASK_NAME, 0, SWITCH_SPEC_TASK);
 			}

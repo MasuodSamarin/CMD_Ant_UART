@@ -333,7 +333,7 @@ u8 write_pos;				//记录receive_buf位置
 u8 receive_data_last = 0;	//上一次接收到的数据值
 
 bool wifi_dc_check = 0;	//充电检测
-
+bool wifi_power_on_start_statu = 0; //WiFi模块开机完成状态，为1时即可操作按键
 extern char *keymsg_task_name;
 
 //中断发送处理函数
@@ -489,6 +489,11 @@ static void wifi_dbg_uart_isr_callback(u8 uto_buf, void *p ,u8 isr_flag)    //p 
 					case 0x09://未充电
 						puts("DC_out!\n");
 						wifi_dc_check = 0;
+						break;
+
+					case 0x10:
+						puts("WiFi_start_statu_power_on!\n");
+						wifi_power_on_start_statu = 1;
 						break;
 					/*
 					case 0xA1://上一曲

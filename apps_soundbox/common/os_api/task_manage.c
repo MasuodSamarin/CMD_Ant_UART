@@ -34,7 +34,7 @@ extern TASK_REGISTER(AI_toy_music_task_info);
 #if WIFI_BT_UART_EN
 extern const struct task_info wifi_task_info;
 extern TASK_REGISTER(wifi_task_info);
-#define TASK_NOT_IN_MAX_NUM					(3)
+#define TASK_NOT_IN_MAX_NUM					(2)
 #else
 #define TASK_NOT_IN_MAX_NUM					(2)
 #endif
@@ -77,11 +77,11 @@ const struct task_info *task_list[] =
     &light_task_info,
 #endif
 
-	&alarm_task_info,
-	
 #if WIFI_BT_UART_EN
 	&wifi_task_info,
 #endif
+
+	&alarm_task_info,
 
     &idle_task_info,
 };
